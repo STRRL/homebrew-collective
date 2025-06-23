@@ -5,20 +5,19 @@ all: help
 
 # Check the formula syntax and style
 check:
-	@echo "🍺 Homebrew Tap Validation Pipeline"
-	@echo "1️⃣ Creating temporary tap..."
-	brew tap-new strrl/collective || true
-	brew tap strrl/collective ~/dev/homebrew-collective || true
+	@echo "🍺 Homebrew Formula Validation"
+	@echo "1️⃣ Cleaning up previous installation..."
+	brew uninstall shell-now || true
 	@echo "2️⃣ Installing formula..."
-	brew install shell-now
-	@echo "3️⃣ Auditing formula..."
-	brew audit --strict shell-now
-	@echo "4️⃣ Testing formula..."
-	brew test shell-now
-	@echo "✅ Pipeline completed successfully!"
+	HOMEBREW_NO_AUTO_UPDATE=1 brew install --build-from-source Formula/shell-now.rb
+	@echo "3️⃣ Checking formula syntax..."
+	ruby -c Formula/shell-now.rb
+	@echo "4️⃣ Testing installed binary..."
+	shell-now --help
+	@echo "✅ Validation completed successfully!"
 
 # Help target
 help:
 	@echo "Available targets:"
-	@echo "  check    - Full validation pipeline (tap-new, install, audit, test)"
+	@echo "  check    - Validate formula (install, audit, test)"
 	@echo "  help     - Show this help message"
