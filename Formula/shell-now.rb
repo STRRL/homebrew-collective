@@ -4,7 +4,7 @@ class ShellNow < Formula
   version "0.1.1"
   license "MIT"
 
-  depends_on "ttyd"
+  depends_on "strrl/collective/ttyd"
   depends_on "cloudflared"
 
   on_macos do
