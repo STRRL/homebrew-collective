@@ -4,6 +4,9 @@ class ShellNow < Formula
   version "0.1.1"
   license "MIT"
 
+  depends_on "ttyd"
+  depends_on "cloudflared"
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/STRRL/shell-now/releases/download/v0.1.1/shell-now_Darwin_arm64.tar.gz"
