@@ -8,8 +8,9 @@ cask "transcube" do
   desc "TransCube macOS app"
   homepage "https://github.com/STRRL/transcube-webapp"
 
-  depends_on formula: ["yt-dlp", "ffmpeg", "finnvoor/tools/yap"]
+  depends_on formula: "yt-dlp"
+  depends_on formula: "ffmpeg"
+  depends_on formula: "finnvoor/tools/yap"
 
   app "TransCube.app"
 end
-
