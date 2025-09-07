@@ -10,11 +10,15 @@ brew tap strrl/collective
 
 # Install packages
 brew install shell-now
+
+# Install casks (macOS apps)
+brew install --cask transcube
 ```
 
 ## Available Packages
 
 - **shell-now**: Instant Web Terminal via ttyd + cloudflared - A one-click webshell for developers
+- **transcube** (cask): TransCube macOS app (requires yt-dlp, ffmpeg, and finnvoor/tools/yap)
 
 ## Contributing
 
