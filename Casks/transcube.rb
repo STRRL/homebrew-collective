@@ -9,5 +9,9 @@ cask "transcube" do
 
   depends_on macos: ">= :tahoe"
 
+  depends_on formula: "yt-dlp"
+  depends_on formula: "ffmpeg"
+  depends_on formula: "finnvoor/tools/yap"
+
   app "TransCube.app"
 end
