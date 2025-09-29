@@ -1,6 +1,6 @@
 cask "transcube" do
   version "0.1.8"
-  sha256 "4dc43222292829a75487de9ee814ecbf24d05ac2263d44f3efcb8bd0310c1e65"
+  sha256 "fd1595426417d499af4c6cb7f8444cc98d119b9cdf9ee0a6a38fd49b7c984698"
 
   url "https://github.com/STRRL/transcube-webapp/releases/download/v#{version}/TransCube-#{version}-macOS.dmg"
   name "TransCube"
