@@ -7,7 +7,7 @@ cask "transcube" do
   desc "Audio/video transcoding and transcription app"
   homepage "https://github.com/STRRL/transcube-webapp"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   depends_on formula: "yt-dlp"
   depends_on formula: "ffmpeg"
